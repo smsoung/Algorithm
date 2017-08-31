@@ -134,12 +134,12 @@ public class String_opertion
 		return text_Frequency;
 	}
 
-	public static void main(String[] args)
-	{
-		String_opertion str = new String_opertion();
-		String s = "asdfghjklzxcvbnm";
-		String t = "bnm";
-		System.out.println(str.index(s, t));
-		System.out.println(Arrays.toString(str.Letter_FrequenCy(s)));
-	}
+//	public static void main(String[] args)
+//	{
+//		String_opertion str = new String_opertion();
+//		String s = "asdfghjklzxcvbnm";
+//		String t = "bnm";
+//		System.out.println(str.index(s, t));
+//		System.out.println(Arrays.toString(str.Letter_FrequenCy(s)));
+//	}
 }
