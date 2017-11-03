@@ -24,12 +24,3 @@ public class 链表中倒数第k个结点
 		return last;
 	}
 }
-
-class ListNode {
-    int val;
-    ListNode next = null;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-}

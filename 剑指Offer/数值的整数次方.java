@@ -28,9 +28,9 @@ public class 数值的整数次方
 
 		return exponent > 0 ? result : (1 / result);
 	}
-	
+
 	public static void main(String[] args)
 	{
-		Power(2, 33);
+		System.out.println(Power(2, 5));
 	}
 }
