@@ -1,30 +1,36 @@
 
 public class 数值的整数次方
 {
-	public double Power(double base, int n)
+	public static double Power(double base, int exponent)
 	{
-		double result = 1, curr = base;
-		int exponent;
-		if (n > 0)
+		double result = 1;
+		int n;
+		if (exponent > 0)
 		{
-			exponent = n;
-		} else if (n < 0)
+			n = exponent;
+		} else if (exponent < 0)
 		{
 			if (base == 0)
 				throw new RuntimeException("分母不能为零");
-			exponent = -n;
+			n = -exponent;
 		} else
 		{
 			return 1;
 		}
 
-		while (exponent != 0)
+		while (n != 0)
 		{
-			if ((exponent & 1) == 1)
-				result *= curr;
-			curr *= curr;
-			exponent >>= 1;
+			if ((n & 1) == 1)
+				result *= base;
+			base *= base;
+			n >>= 1;
 		}
-		return n >= 0 ? result : (1 / result);
+
+		return exponent > 0 ? result : (1 / result);
+	}
+	
+	public static void main(String[] args)
+	{
+		Power(2, 33);
 	}
 }
