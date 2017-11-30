@@ -1,3 +1,6 @@
+package 代码的鲁棒性;
+
+import 链表.ListNode;
 
 public class 链表中倒数第k个结点
 {

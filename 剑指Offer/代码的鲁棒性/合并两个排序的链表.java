@@ -1,3 +1,6 @@
+package 代码的鲁棒性;
+
+import 链表.ListNode;
 
 public class 合并两个排序的链表
 {

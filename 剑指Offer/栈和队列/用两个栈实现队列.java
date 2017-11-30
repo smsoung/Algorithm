@@ -1,3 +1,4 @@
+package 栈和队列;
 import java.util.Stack;
 
 public class 用两个栈实现队列

@@ -1,3 +1,4 @@
+package 举例让抽象具体化;
 import java.util.Stack;
 
 public class 栈的压入_弹出序列

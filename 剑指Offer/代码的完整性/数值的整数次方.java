@@ -1,3 +1,4 @@
+package 代码的完整性;
 
 public class 数值的整数次方
 {

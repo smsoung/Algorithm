@@ -1,3 +1,4 @@
+package 举例让抽象具体化;
 import java.util.Stack;
 
 public class 包含min函数的栈

@@ -1,3 +1,4 @@
+package 举例让抽象具体化;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

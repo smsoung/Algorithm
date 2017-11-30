@@ -1,3 +1,4 @@
+package 查找和排序;
 
 public class 旋转数组的最小数字
 {

@@ -1,3 +1,4 @@
+package 位运算;
 
 public class 二进制中1的个数
 {

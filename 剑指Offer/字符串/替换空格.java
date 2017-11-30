@@ -1,3 +1,4 @@
+package 字符串;
 
 public class 替换空格
 {
