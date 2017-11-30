@@ -1,4 +1,4 @@
-package 链表;
+package 线性表;
 
 import java.util.Scanner;
 
