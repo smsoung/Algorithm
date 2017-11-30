@@ -10,8 +10,9 @@ public class LinkedList
 	{
 		h = new Lnode();// 建立头结点，并使其指针域为空
 		h.next = null;
-		Scanner sc = new Scanner(System.in);// 读入字符串
-		String str = sc.nextLine();
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);// 读入字符串
+		String str = scanner.nextLine();
 		int i = 0;
 		while (i < str.length())
 		{
