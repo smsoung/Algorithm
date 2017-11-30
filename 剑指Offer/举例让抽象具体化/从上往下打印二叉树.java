@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import 树.TreeNode;
+
 public class 从上往下打印二叉树
 {
 	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root)
