@@ -4,13 +4,19 @@ import java.util.Scanner;
 
 public class LinkedList
 {
+	/**
+	 * 头结点
+	 */
 	Lnode h = null;
 
+	/**
+	 * 构造方法(头插法)
+	 */
+	@SuppressWarnings("resource")
 	public LinkedList()
 	{
 		h = new Lnode();// 建立头结点，并使其指针域为空
 		h.next = null;
-		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);// 读入字符串
 		String str = scanner.nextLine();
 		int i = 0;
@@ -24,12 +30,16 @@ public class LinkedList
 		}
 	}
 
+	/**
+	 * 求单链表的长度
+	 * 
+	 * @return
+	 */
 	public int size()
 	{
-		Lnode p;// 设置指针变量p
+		Lnode p = h.next;// 设置指针变量p指向第一个结点
 		int i = 0;
-		p = h.next;// p指向第一个结点
-		while (p != null)
+		while (p != null)// 依次访问单链表的每个结点，p=null时结束
 		{
 			i++;
 			p = p.next;// p指针后移
@@ -37,6 +47,12 @@ public class LinkedList
 		return i;
 	}
 
+	/**
+	 * 插入算法 将值为x的结点插在p之后
+	 * 
+	 * @param p
+	 * @param x
+	 */
 	public void insertElementAfter(Lnode p, char x)
 	{
 		Lnode s = new Lnode();// 生成一个新结点s
@@ -45,6 +61,13 @@ public class LinkedList
 		p.next = s;
 	}
 
+	/**
+	 * 插入算法 在第i个元素之前插入一个元素
+	 * 
+	 * @param i
+	 * @param x
+	 * @return
+	 */
 	public int insertElementAt(int i, char x)
 	{
 		Lnode p, s;// 定义指针变量p,定义结点s
@@ -64,10 +87,15 @@ public class LinkedList
 			return 1;// 返回1表示正常结束
 		} else
 		{
-			return 0;// 返回0表示插入失败
+			return -1;// 返回-1表示插入失败
 		}
 	}
 
+	/**
+	 * 删除算法 删除p的后继结点
+	 * 
+	 * @param p
+	 */
 	public void remove(Lnode p)
 	{
 		Lnode q;
@@ -79,6 +107,12 @@ public class LinkedList
 		}
 	}
 
+	/**
+	 * 按值查找
+	 * 
+	 * @param x
+	 * @return
+	 */
 	public Lnode search(char x)
 	{
 		Lnode p = h.next;
@@ -87,5 +121,26 @@ public class LinkedList
 			p = p.next;
 		}
 		return p;
+	}
+
+	/**
+	 * 取元素
+	 * 
+	 * @param i
+	 * @return
+	 */
+	public Lnode get(int i)
+	{
+		Lnode p = h.next;
+		int j = 1;
+		while (p != null && j < i)// 移动指针p,直到p为空或p指向第i个元素
+		{
+			p = p.next;
+			j++;
+		}
+		if (i == j)
+			return p;// 返回第i个元素的存储地址
+		else
+			return null;
 	}
 }
