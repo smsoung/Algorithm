@@ -10,6 +10,16 @@ public class LinkedList
 	Lnode h = null;
 
 	/**
+	 * 设置头结点
+	 * 
+	 * @param h
+	 */
+	public void setH(Lnode h)
+	{
+		this.h = h;
+	}
+
+	/**
 	 * 构造方法(头插法)
 	 */
 	@SuppressWarnings("resource")

@@ -7,6 +7,16 @@ public class SqList
 	int len = 0;
 
 	/**
+	 * 求顺序表长度
+	 * 
+	 * @return
+	 */
+	public int size()
+	{
+		return len;
+	}
+
+	/**
 	 * 插入算法 在第i个元素插入一个新的元素
 	 * 
 	 * @param obj
@@ -71,6 +81,6 @@ public class SqList
 			if (obj.equals(arr[i]))
 				return i + 1;
 		}
-		return -1;
+		return 0;
 	}
 }

@@ -1,11 +1,11 @@
 package 线性表;
 
-public class DoubleCircularLinkedList
+public class DCLinkedList
 {
 	/**
 	 * 头结点
 	 */
-	DulNode h = null;
+	DNode h = null;
 
 	/**
 	 * 插入算法 在结点p之前插入结点s
@@ -15,9 +15,9 @@ public class DoubleCircularLinkedList
 	 * @param x
 	 * @return
 	 */
-	public int insert(DulNode h, int i, char x)
+	public int insert(DNode h, int i, char x)
 	{
-		DulNode p, s;
+		DNode p, s;
 		p = h.next;
 		int j = 1;
 		while (p != h && j < i)// 查找第i个元素,直到p指向头结点h或p指向第i个元素结束
@@ -27,7 +27,7 @@ public class DoubleCircularLinkedList
 		}
 		if (j == i)
 		{
-			s = new DulNode();
+			s = new DNode();
 			s.data = x;
 			s.prior = p.prior;// 改变指针链接，使s插入p之前
 			p.prior.next = s;
@@ -45,9 +45,9 @@ public class DoubleCircularLinkedList
 	 * @param i
 	 * @return
 	 */
-	public char delete(DulNode h, int i)
+	public char delete(DNode h, int i)
 	{
-		DulNode p = h.next;
+		DNode p = h.next;
 		int j = 1;
 		while (p != h && j < i)// 在双向链表中依次查找第i个元素
 		{
