@@ -7,14 +7,14 @@ public class LinkedList
 	/**
 	 * 头结点
 	 */
-	Lnode h = null;
+	ListNode h = null;
 
 	/**
 	 * 设置头结点
 	 * 
 	 * @param h
 	 */
-	public void setH(Lnode h)
+	public void setH(ListNode h)
 	{
 		this.h = h;
 	}
@@ -25,14 +25,14 @@ public class LinkedList
 	@SuppressWarnings("resource")
 	public LinkedList()
 	{
-		h = new Lnode();// 建立头结点，并使其指针域为空
+		h = new ListNode();// 建立头结点，并使其指针域为空
 		h.next = null;
 		Scanner scanner = new Scanner(System.in);// 读入字符串
 		String str = scanner.nextLine();
 		int i = 0;
 		while (i < str.length())
 		{
-			Lnode p = new Lnode();// 建立新结点p
+			ListNode p = new ListNode();// 建立新结点p
 			p.data = str.charAt(i);// 将字符赋给数据域
 			p.next = h.next;// 改变指针状况
 			h.next = p;// h的直接后继是p
@@ -47,7 +47,7 @@ public class LinkedList
 	 */
 	public int size()
 	{
-		Lnode p = h.next;// 设置指针变量p指向第一个结点
+		ListNode p = h.next;// 设置指针变量p指向第一个结点
 		int i = 0;
 		while (p != null)// 依次访问单链表的每个结点，p=null时结束
 		{
@@ -63,9 +63,9 @@ public class LinkedList
 	 * @param p
 	 * @param x
 	 */
-	public void insertElementAfter(Lnode p, char x)
+	public void insertElementAfter(ListNode p, char x)
 	{
-		Lnode s = new Lnode();// 生成一个新结点s
+		ListNode s = new ListNode();// 生成一个新结点s
 		s.data = x;
 		s.next = p.next;// 新结点链入单链表中
 		p.next = s;
@@ -80,7 +80,7 @@ public class LinkedList
 	 */
 	public int insertElementAt(int i, char x)
 	{
-		Lnode p, s;// 定义指针变量p,定义结点s
+		ListNode p, s;// 定义指针变量p,定义结点s
 		p = h;// 初始化指针变量
 		int j = 0;
 		while (p != null && j < i - 1)// 寻找第i-1号结点
@@ -90,7 +90,7 @@ public class LinkedList
 		}
 		if (p != null)
 		{
-			s = new Lnode();
+			s = new ListNode();
 			s.data = x;
 			s.next = p.next;// 改变指针状态，将s插入表中
 			p.next = s;
@@ -106,9 +106,9 @@ public class LinkedList
 	 * 
 	 * @param p
 	 */
-	public void remove(Lnode p)
+	public void remove(ListNode p)
 	{
-		Lnode q;
+		ListNode q;
 		if (p.next != null)
 		{
 			q = p.next;// q位p的直接后继
@@ -123,9 +123,9 @@ public class LinkedList
 	 * @param x
 	 * @return
 	 */
-	public Lnode search(char x)
+	public ListNode search(char x)
 	{
-		Lnode p = h.next;
+		ListNode p = h.next;
 		while (p != null && p.data != x)
 		{
 			p = p.next;
@@ -139,9 +139,9 @@ public class LinkedList
 	 * @param i
 	 * @return
 	 */
-	public Lnode get(int i)
+	public ListNode get(int i)
 	{
-		Lnode p = h.next;
+		ListNode p = h.next;
 		int j = 1;
 		while (p != null && j < i)// 移动指针p,直到p为空或p指向第i个元素
 		{

@@ -1,7 +1,7 @@
 package 线性表;
 
-public class Lnode
+public class ListNode
 {
 	char data;
-	Lnode next;
+	ListNode next;
 }

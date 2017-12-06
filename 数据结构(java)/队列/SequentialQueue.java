@@ -1,12 +1,12 @@
 package 队列;
 
-public class Cqueue
+public class SequentialQueue
 {
 	final int maxsize = 100;
 	int elem[] = new int[maxsize];
 	int front, rear;
 
-	public Cqueue()
+	public SequentialQueue()
 	{
 		front = 0;
 		rear = 0;
@@ -79,5 +79,4 @@ public class Cqueue
 		}
 	}
 
-	
 }

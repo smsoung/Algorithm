@@ -1,6 +1,6 @@
 package 线性表;
 
-public class SqList
+public class SequentialList
 {
 	final int maxlen = 1000;
 	Object[] arr = new Object[maxlen];

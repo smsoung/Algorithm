@@ -1,6 +1,6 @@
 package 队列;
 
-public class Lqueue
+public class LinkedQueue
 {
 	NodeType front;
 	NodeType rear;
@@ -8,7 +8,7 @@ public class Lqueue
 	/**
 	 * 初始化操作
 	 */
-	public Lqueue()
+	public LinkedQueue()
 	{
 		front = new NodeType();
 		front.next = null;
