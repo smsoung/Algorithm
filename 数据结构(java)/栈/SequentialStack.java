@@ -1,6 +1,6 @@
 package 栈;
 
-public class Sqstack
+public class SequentialStack
 {
 	final int maxsize = 100;
 	int[] arr = new int[maxsize];

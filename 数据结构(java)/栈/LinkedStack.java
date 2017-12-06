@@ -1,11 +1,11 @@
 package 栈;
 
-public class LinkStack
+public class LinkedStack
 {
 	/**
 	 * 栈顶指针 指针变量
 	 */
-	Stacknode top;
+	StackNode top;
 
 	/**
 	 * 入栈
@@ -14,8 +14,8 @@ public class LinkStack
 	 */
 	public void push(int x)
 	{
-		Stacknode s = null;
-		s = new Stacknode();
+		StackNode s = null;
+		s = new StackNode();
 		s.data = x;
 		s.next = top;
 		top = s;
@@ -33,7 +33,7 @@ public class LinkStack
 		else
 		{
 			int x = top.data;
-			Stacknode p = top;
+			StackNode p = top;
 			top = p.next;
 			p = null;
 			return x;
