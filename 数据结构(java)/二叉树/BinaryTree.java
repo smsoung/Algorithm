@@ -142,18 +142,53 @@ public class BinaryTree
 	@SuppressWarnings("null")
 	public void levelOrderTraversal(TreeNode root)
 	{
-		Queue<TreeNode> queue = null;
+		Queue<TreeNode> queue = null;// 创建一个队列
 		if (root == null)
 			return;
-		queue.add(root);
-		while (!queue.isEmpty())
+		queue.add(root);// 添加根节点
+		while (!queue.isEmpty())// 队列不为空
 		{
-			TreeNode t = queue.remove();
+			TreeNode t = queue.remove();// 删除并返回这个队列的头
 			System.out.println(t);
 			if (t.left != null)
 				queue.add(t.left);
 			if (t.right != null)
 				queue.add(t.right);
 		}
+	}
+
+	/**
+	 * 输出二叉树中的叶子结点
+	 * 
+	 * @param root
+	 */
+	public void preOrderPrintLeaves(TreeNode root)
+	{
+		if (root != null)
+		{
+			if (root.left == null && root.right == null)// 如果左右子节点都为空，说明是叶子结点
+				System.out.println(root.data);
+			preOrderPrintLeaves(root.left);
+			preOrderPrintLeaves(root.right);
+		}
+	}
+
+	/**
+	 * 二叉树的高度
+	 * 
+	 * @param root
+	 * @return
+	 */
+	public int postOrderGetHeight(TreeNode root)
+	{
+		int HL, HR, MaxH;
+		if (root != null)
+		{
+			HL = postOrderGetHeight(root.left);// 求左子树的深度
+			HR = postOrderGetHeight(root.right);// 求右子树的深度
+			MaxH = (HL > HR) ? HL : HR;// 取左右子树中较大的深度
+			return MaxH + 1;// 返回树的深度
+		} else
+			return 0;// 空树的深度为0
 	}
 }
