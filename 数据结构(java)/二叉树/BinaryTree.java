@@ -1,6 +1,9 @@
 package 二叉树;
 
+import java.util.Queue;
 import java.util.Stack;
+
+import com.sun.swing.internal.plaf.metal.resources.metal_zh_TW;
 
 public class BinaryTree
 {
@@ -128,6 +131,29 @@ public class BinaryTree
 					root = null;
 				}
 			}
+		}
+	}
+
+	/**
+	 * 层序遍历 用队列实现
+	 * 
+	 * @param root
+	 */
+	@SuppressWarnings("null")
+	public void levelOrderTraversal(TreeNode root)
+	{
+		Queue<TreeNode> queue = null;
+		if (root == null)
+			return;
+		queue.add(root);
+		while (!queue.isEmpty())
+		{
+			TreeNode t = queue.remove();
+			System.out.println(t);
+			if (t.left != null)
+				queue.add(t.left);
+			if (t.right != null)
+				queue.add(t.right);
 		}
 	}
 }
