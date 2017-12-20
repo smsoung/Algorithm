@@ -3,19 +3,15 @@ package 二叉树;
 import java.util.Queue;
 import java.util.Stack;
 
-import com.sun.swing.internal.plaf.metal.resources.metal_zh_TW;
-
-public class BinaryTree
-{
+public class BinaryTree {
+	
 	/**
 	 * 先序遍历 递归算法
 	 * 
 	 * @param root
 	 */
-	public void preOrder(TreeNode root)
-	{
-		if (root != null)
-		{
+	public void preOrder(TreeNode root) {
+		if (root != null) {
 			System.out.println(root.data);
 			preOrder(root.left);
 			preOrder(root.right);
@@ -27,10 +23,8 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void inOrder(TreeNode root)
-	{
-		if (root != null)
-		{
+	public void inOrder(TreeNode root) {
+		if (root != null) {
 			preOrder(root.left);
 			System.out.println(root.data);
 			preOrder(root.right);
@@ -42,10 +36,8 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void postOrder(TreeNode root)
-	{
-		if (root != null)
-		{
+	public void postOrder(TreeNode root) {
+		if (root != null) {
 			preOrder(root.left);
 			preOrder(root.right);
 			System.out.println(root.data);
@@ -57,19 +49,15 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void preOrderTraversal(TreeNode root)
-	{
+	public void preOrderTraversal(TreeNode root) {
 		Stack<TreeNode> s = new Stack<>();
-		while (root != null || !s.empty())
-		{
-			while (root != null)
-			{
+		while (root != null || !s.empty()) {
+			while (root != null) {
 				System.out.println(root.data);
 				s.push(root);
 				root = root.left;
 			}
-			if (!s.empty())
-			{
+			if (!s.empty()) {
 				root = s.pop();
 				root = root.right;
 			}
@@ -81,18 +69,14 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void inOrderTraversal(TreeNode root)
-	{
+	public void inOrderTraversal(TreeNode root) {
 		Stack<TreeNode> s = new Stack<>();
-		while (root != null || !s.empty())
-		{
-			while (root != null)
-			{
+		while (root != null || !s.empty()) {
+			while (root != null) {
 				s.push(root);
 				root = root.left;
 			}
-			if (!s.empty())
-			{
+			if (!s.empty()) {
 				root = s.pop();
 				System.out.println(root.data);
 				root = root.right;
@@ -105,28 +89,22 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void postOrderTraversal(TreeNode root)
-	{
+	public void postOrderTraversal(TreeNode root) {
 		Stack<TreeNode> s = new Stack<>();
 		int flag = 0;
-		while (root != null || !s.empty())
-		{
-			while (root != null)
-			{
+		while (root != null || !s.empty()) {
+			while (root != null) {
 				flag = 1;
 				s.push(root);
 				root = root.left;
 			}
-			if (!s.empty())
-			{
+			if (!s.empty()) {
 				root = s.pop();
-				if (flag == 1)
-				{
+				if (flag == 1) {
 					flag = 0;
 					s.push(root);
 					root = root.right;
-				} else
-				{
+				} else {
 					System.out.println(root.data);
 					root = null;
 				}
@@ -140,8 +118,7 @@ public class BinaryTree
 	 * @param root
 	 */
 	@SuppressWarnings("null")
-	public void levelOrderTraversal(TreeNode root)
-	{
+	public void levelOrderTraversal(TreeNode root) {
 		Queue<TreeNode> queue = null;// 创建一个队列
 		if (root == null)
 			return;
@@ -162,10 +139,8 @@ public class BinaryTree
 	 * 
 	 * @param root
 	 */
-	public void preOrderPrintLeaves(TreeNode root)
-	{
-		if (root != null)
-		{
+	public void preOrderPrintLeaves(TreeNode root) {
+		if (root != null) {
 			if (root.left == null && root.right == null)// 如果左右子节点都为空，说明是叶子结点
 				System.out.println(root.data);
 			preOrderPrintLeaves(root.left);
@@ -179,11 +154,9 @@ public class BinaryTree
 	 * @param root
 	 * @return
 	 */
-	public int postOrderGetHeight(TreeNode root)
-	{
+	public int postOrderGetHeight(TreeNode root) {
 		int HL, HR, MaxH;
-		if (root != null)
-		{
+		if (root != null) {
 			HL = postOrderGetHeight(root.left);// 求左子树的深度
 			HR = postOrderGetHeight(root.right);// 求右子树的深度
 			MaxH = (HL > HR) ? HL : HR;// 取左右子树中较大的深度

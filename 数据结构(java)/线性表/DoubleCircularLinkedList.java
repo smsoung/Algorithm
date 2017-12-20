@@ -1,7 +1,6 @@
 package 线性表;
 
-public class DoubleCircularLinkedList
-{
+public class DoubleCircularLinkedList {
 	/**
 	 * 头结点
 	 */
@@ -15,8 +14,7 @@ public class DoubleCircularLinkedList
 	 * @param x
 	 * @return
 	 */
-	public int insert(DoubleNode h, int i, char x)
-	{
+	public int insert(DoubleNode h, int i, char x) {
 		DoubleNode p, s;
 		p = h.next;
 		int j = 1;
@@ -25,8 +23,7 @@ public class DoubleCircularLinkedList
 			j++;
 			p = p.next;
 		}
-		if (j == i)
-		{
+		if (j == i) {
 			s = new DoubleNode();
 			s.data = x;
 			s.prior = p.prior;// 改变指针链接，使s插入p之前
@@ -45,8 +42,7 @@ public class DoubleCircularLinkedList
 	 * @param i
 	 * @return
 	 */
-	public char delete(DoubleNode h, int i)
-	{
+	public int delete(DoubleNode h, int i) {
 		DoubleNode p = h.next;
 		int j = 1;
 		while (p != h && j < i)// 在双向链表中依次查找第i个元素
@@ -55,9 +51,8 @@ public class DoubleCircularLinkedList
 			p = p.next;
 		}
 
-		if (j == i)
-		{
-			char s = p.data;
+		if (j == i) {
+			int s = p.data;
 			p.prior.next = p.next;// 删除结点P
 			p.next.prior = p.prior;
 			p = null;// 释放P结点空间
