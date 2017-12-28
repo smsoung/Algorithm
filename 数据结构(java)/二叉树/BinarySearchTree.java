@@ -108,27 +108,5 @@ public class BinarySearchTree
 		return root;
 	}
 
-	TreeNode delete(int x, TreeNode root)
-	{
-		TreeNode temp;
-		if (root == null)
-			System.out.println("要删除的元素未找到");
-		else if(x<root.data) 
-			root.left=delete(x, root.left);
-		else if(x>root.data)
-			root.right=delete(x, root.right);
-		else {
-			if(root.left!=null && root.right!=null) {
-				temp=findMin(root.right);
-				root.data=temp.data;
-				root.right=delete(root.data, root.right);
-			}else {
-				if (root.left==null)
-					root=root.right;
-				else if (root.right==null)
-					root=root.left;
-			}
-				
-		}
-	}
+	
 }
