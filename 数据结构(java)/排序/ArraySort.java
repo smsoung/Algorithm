@@ -15,42 +15,47 @@ public class ArraySort {
 	
 	//选择排序
 	public static void selectSort(int[] arr) {
-		for (int i = 0; i < arr.length-1; i++) {
-			for (int j = i+1; j < arr.length; j++) {
-				if(arr[i] > arr[j]){
-					int temp = arr[j];
-					arr[j] = arr[i];
+		for (int p = 0; p < arr.length-1; p++) {//p指针指向第一位，没排好一趟向后移一位
+			int flag = 0;
+			for (int i = p+1; i < arr.length; i++) {//i指向p的后一位，比较一次向后移一位
+				if (arr[p] > arr[i]) {
+					int temp = arr[p];
+					arr[p] = arr[i];
 					arr[i] = temp;
+					flag = 1;//标识发生了交换
 				}
 			}
+			if(flag == 0)//全程无交换
+				break;
 		}
 	}
 	
 	//冒泡排序
 	public static void bubbleSort(int[] arr){
-		for (int i = 0; i < arr.length-1; i++) {
-			for (int j = 0; j < arr.length-1-i; j++) {
-				if (arr[j] > arr[j+1]) {
-					int temp = arr[j+1];
-					arr[j+1] = arr[j];
-					arr[j] = temp;
+		for (int p = arr.length-1; p > 0; p--) {//p指针指向最后一位，每排好一趟向前移一位
+			int flag = 0;
+			for (int i = 0; i < p; i++) {//i指向0，比较一次向后移一位
+				if(arr[i] > arr[i+1]){
+					int temp = arr[i];
+					arr[i] = arr[i+1];
+					arr[i+1] = temp;
+					flag = 1;//标识发生了交换
 				}
 			}
+			if(flag == 0)//全程无交换
+				break;
 		}
 	}
 	
-	//直接插入排序
+	//插入排序，每趟将一个待排序的关键字按照其值大小插入到已经排好的部分有序序列的适当位置上
 	public static void insertSort(int[] arr){
-		int i,j;
-		int temp;
-		for (i = 1; i < arr.length; i++) {
-			temp = arr[i];
-			j = i-1;
-			while (j>=0 && temp<arr[j]) {
-				arr[j+1] = arr[j];
-				--j;
+		for (int p = 1; p < arr.length; p++) {
+			int temp = arr[p];//摸下一张牌
+			int i;
+			for (i = p; i>0 && arr[i-1]>temp; i--) {
+				arr[i] = arr[i-1];//移出空位
 			}
-			arr[j+1] = temp;
+			arr[i] = temp;//新牌落位
 		}
 	}
 	
@@ -78,4 +83,5 @@ public class ArraySort {
 			quickSort(arr, i+1, high);
 		}
 	}
+	
 }
