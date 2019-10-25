@@ -1,10 +1,10 @@
 package 画图让抽象形象化;
+
 import java.util.ArrayList;
 
-public class 顺时针打印矩阵
-{
-	public static ArrayList<Integer> printMatrix(int[][] matrix)
-	{
+public class 顺时针打印矩阵 {
+	
+	public static ArrayList<Integer> printMatrix(int[][] matrix) {
 		// if (matrix == null)
 		// return null;
 		ArrayList<Integer> list = new ArrayList<>();
@@ -12,8 +12,7 @@ public class 顺时针打印矩阵
 		int col = matrix[0].length;
 
 		int left = 0, right = col - 1, top = 0, bottom = row - 1;
-		while (left <= right && top <= bottom)
-		{
+		while (left <= right && top <= bottom) {
 			// 从左到右打印一行
 			for (int i = left; i <= right; i++)
 				list.add(matrix[top][i]);
@@ -36,8 +35,7 @@ public class 顺时针打印矩阵
 		return list;
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		System.out.println(printMatrix(matrix));
 	}

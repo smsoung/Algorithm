@@ -2,26 +2,23 @@ package 举例让抽象具体化;
 
 import java.util.Arrays;
 
-public class 二叉搜索树的后序遍历序列
-{
-	public static boolean VerifySquenceOfBST(int[] sequence)
-	{
+public class 二叉搜索树的后序遍历序列 {
+	
+	public static boolean VerifySquenceOfBST(int[] sequence) {
 		if (sequence == null || sequence.length <= 0)
 			return false;
 		int root = sequence[sequence.length - 1];
 
 		// 在二叉搜索树中左子数的结点小于根节点
 		int i = 0;
-		for (; i < sequence.length - 1; i++)
-		{
+		for (; i < sequence.length - 1; i++) {
 			if (sequence[i] > root)
 				break;
 		}
 
 		// 在二叉搜索树中右子树的结点大于根节点
 		int j = i;
-		for (; j < sequence.length - 1; j++)
-		{
+		for (; j < sequence.length - 1; j++) {
 			if (sequence[j] < root)
 				return false;
 		}
@@ -39,8 +36,7 @@ public class 二叉搜索树的后序遍历序列
 		return (left && right);
 	}
 
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		int[] sequence = { 5, 7, 6, 9, 11, 10, 8 };
 		System.out.println(VerifySquenceOfBST(sequence));
 	}

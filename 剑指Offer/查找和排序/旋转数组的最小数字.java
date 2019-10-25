@@ -1,31 +1,25 @@
 package 查找和排序;
 
-public class 旋转数组的最小数字
-{
-	public static int minNumberInRotateArray(int[] array)
-	{
+public class 旋转数组的最小数字 {
+	
+	public static int minNumberInRotateArray(int[] array) {
 		int low = 0;
 		int high = array.length - 1;
-		while (low < high)
-		{
+		while (low < high) {
 			int mid = low + (high - low) / 2;
-			if (array[mid] > array[high])
-			{
+			if (array[mid] > array[high]) {
 				low = mid + 1;
-			} else if (array[mid] == array[high])
-			{
+			} else if (array[mid] == array[high]) {
 				high = high - 1;
-			} else
-			{
+			} else {
 				high = mid;
 			}
 		}
 		return array[low];
 	}
 
-	public static void main(String[] args)
-	{
-		int[] array = { 1,0,1,1,1};
+	public static void main(String[] args) {
+		int[] array = { 1, 0, 1, 1, 1 };
 		System.out.println(minNumberInRotateArray(array));
 	}
 }

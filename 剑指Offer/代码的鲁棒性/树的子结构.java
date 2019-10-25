@@ -2,13 +2,11 @@ package 代码的鲁棒性;
 
 import 树.TreeNode;
 
-public class 树的子结构
-{
-	public boolean HasSubtree(TreeNode root1, TreeNode root2)
-	{
+public class 树的子结构 {
+	
+	public boolean HasSubtree(TreeNode root1, TreeNode root2) {
 		boolean result = false;
-		if (root1 != null && root2 != null)
-		{
+		if (root1 != null && root2 != null) {
 			if (root1.val == root2.val)
 				result = DoesTree1HaveTree2(root1, root2);
 			if (!result)
@@ -20,8 +18,7 @@ public class 树的子结构
 		return result;
 	}
 
-	private boolean DoesTree1HaveTree2(TreeNode root1, TreeNode root2)
-	{
+	private boolean DoesTree1HaveTree2(TreeNode root1, TreeNode root2) {
 		if (root2 == null)
 			return true;
 		if (root1 == null)

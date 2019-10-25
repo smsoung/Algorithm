@@ -4,13 +4,12 @@ import java.util.ArrayList;
 
 import 树.TreeNode;
 
-public class 二叉树中和为某一值的路径
-{
+public class 二叉树中和为某一值的路径 {
+	
 	private ArrayList<ArrayList<Integer>> listAll = new ArrayList<ArrayList<Integer>>();
 	private ArrayList<Integer> list = new ArrayList<Integer>();
 
-	public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target)
-	{
+	public ArrayList<ArrayList<Integer>> FindPath(TreeNode root, int target) {
 		if (root == null)
 			return listAll;
 		list.add(root.val);

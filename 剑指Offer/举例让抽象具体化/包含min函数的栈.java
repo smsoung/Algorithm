@@ -1,13 +1,13 @@
 package 举例让抽象具体化;
+
 import java.util.Stack;
 
-public class 包含min函数的栈
-{
+public class 包含min函数的栈 {
+	
 	Stack<Integer> data = new Stack<>();// 数据栈
 	Stack<Integer> min = new Stack<>();// 辅助栈
 
-	public void push(int node)
-	{
+	public void push(int node) {
 		data.push(node);
 		if (min.empty() || node < min.peek())
 			min.push(node);
@@ -15,19 +15,16 @@ public class 包含min函数的栈
 			min.push(min.peek());
 	}
 
-	public void pop()
-	{
+	public void pop() {
 		data.pop();
 		min.pop();
 	}
 
-	public int top()
-	{
+	public int top() {
 		return data.peek();
 	}
 
-	public int min()
-	{
+	public int min() {
 		return min.peek();
 	}
 }
