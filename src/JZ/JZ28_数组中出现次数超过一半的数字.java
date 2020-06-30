@@ -1,6 +1,6 @@
 package JZ;
 
-public class 数组中出现次数超过一半的数字 {
+public class JZ28_数组中出现次数超过一半的数字 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

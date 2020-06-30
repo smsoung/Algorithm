@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.Arrays;
 
-public class 调整数组顺序使奇数位于偶数前面 {
+public class JZ13_调整数组顺序使奇数位于偶数前面 {
 	// 前偶后奇直接交换不能保证顺序
 	public static void reOrderArray(int[] array) {
 		int i = 0, j = array.length - 1;

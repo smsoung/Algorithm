@@ -1,6 +1,6 @@
 package JZ;
 
-public class 跳台阶 {
+public class JZ8_跳台阶 {
 	
 	public int JumpFloor(int target) {
 		if (target <= 2)

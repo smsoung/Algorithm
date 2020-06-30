@@ -1,6 +1,6 @@
 package JZ;
 
-public class 二进制中1的个数 {
+public class JZ11_二进制中1的个数 {
 	
 	public int NumberOf1(int n) {
 		int count = 0;

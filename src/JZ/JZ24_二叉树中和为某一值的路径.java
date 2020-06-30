@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.ArrayList;
 
-public class 二叉树中和为某一值的路径 {
+public class JZ24_二叉树中和为某一值的路径 {
 	
 	private ArrayList<ArrayList<Integer>> listAll = new ArrayList<ArrayList<Integer>>();
 	private ArrayList<Integer> list = new ArrayList<Integer>();

@@ -1,6 +1,6 @@
 package JZ;
 
-public class 斐波那契数列 {
+public class JZ7_斐波那契数列 {
 	
 	public static int Fibonacci(int n) {
 		if (n <= 1) {

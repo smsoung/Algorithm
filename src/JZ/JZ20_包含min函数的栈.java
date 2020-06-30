@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.Stack;
 
-public class 包含min函数的栈 {
+public class JZ20_包含min函数的栈 {
 	
 	Stack<Integer> data = new Stack<>();// 数据栈
 	Stack<Integer> min = new Stack<>();// 辅助栈

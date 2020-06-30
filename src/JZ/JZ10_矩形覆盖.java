@@ -1,6 +1,6 @@
 package JZ;
 
-public class 矩形覆盖 {
+public class JZ10_矩形覆盖 {
 	
 	public int RectCover(int target) {
 		if (target <= 2)

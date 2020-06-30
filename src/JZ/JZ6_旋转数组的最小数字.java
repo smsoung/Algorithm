@@ -1,6 +1,6 @@
 package JZ;
 
-public class 旋转数组的最小数字 {
+public class JZ6_旋转数组的最小数字 {
 	
 	public static int minNumberInRotateArray(int[] array) {
 		int low = 0;

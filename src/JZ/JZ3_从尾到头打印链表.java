@@ -3,7 +3,7 @@ package JZ;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class 从尾到头打印链表 {
+public class JZ3_从尾到头打印链表 {
 	
 	ArrayList<Integer> arrayList = new ArrayList<>();
 

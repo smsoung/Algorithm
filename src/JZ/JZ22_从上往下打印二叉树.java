@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 从上往下打印二叉树 {
+public class JZ22_从上往下打印二叉树 {
 	
 	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
 		ArrayList<Integer> list = new ArrayList<>();

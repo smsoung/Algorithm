@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.Stack;
 
-public class 栈的压入_弹出序列 {
+public class JZ21_栈的压入_弹出序列 {
 	
 	public boolean IsPopOrder(int[] pushA, int[] popA) {
 		if (pushA == null || popA == null)

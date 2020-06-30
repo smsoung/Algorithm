@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.Arrays;
 
-public class 二叉搜索树的后序遍历序列 {
+public class JZ23_二叉搜索树的后序遍历序列 {
 	
 	public static boolean VerifySquenceOfBST(int[] sequence) {
 		if (sequence == null || sequence.length <= 0)

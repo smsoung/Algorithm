@@ -1,6 +1,6 @@
 package JZ;
 
-public class 链表中倒数第k个结点 {
+public class JZ14_链表中倒数第k个结点 {
 
 	public static ListNode FindKthToTail(ListNode head, int k) {
 		if (head == null || k <= 0)

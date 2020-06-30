@@ -1,6 +1,6 @@
 package JZ;
 
-public class 数值的整数次方 {
+public class JZ12_数值的整数次方 {
 	
 	public static double Power(double base, int exponent) {
 		double result = 1;

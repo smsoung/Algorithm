@@ -1,7 +1,7 @@
 package JZ;
 
 
-public class JZ1二维数组中的查找 {
+public class JZ1_二维数组中的查找 {
 	
 	public static boolean Find(int target, int[][] array) {
 		int row = array.length - 1;

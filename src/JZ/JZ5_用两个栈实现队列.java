@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.Stack;
 
-public class 用两个栈实现队列 {
+public class JZ5_用两个栈实现队列 {
 	
 	Stack<Integer> stack1 = new Stack<Integer>();
 	Stack<Integer> stack2 = new Stack<Integer>();

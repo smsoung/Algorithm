@@ -1,6 +1,6 @@
 package JZ;
 
-public class 二叉搜索树与双向链表 {
+public class JZ26_二叉搜索树与双向链表 {
 
 	TreeNode head = null;// 头结点
 	TreeNode p = null;// 指针

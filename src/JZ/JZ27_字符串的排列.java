@@ -3,7 +3,7 @@ package JZ;
 import java.util.ArrayList;
 import java.util.List;
 
-public class 字符串的排列 {
+public class JZ27_字符串的排列 {
 
 	public static ArrayList<String> Permutation(String str) {
 		List<String> list = new ArrayList<>();

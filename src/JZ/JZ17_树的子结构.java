@@ -1,6 +1,6 @@
 package JZ;
 
-public class 树的子结构 {
+public class JZ17_树的子结构 {
 	
 	public boolean HasSubtree(TreeNode root1, TreeNode root2) {
 		boolean result = false;

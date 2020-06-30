@@ -2,7 +2,7 @@ package JZ;
 
 import java.util.ArrayList;
 
-public class 顺时针打印矩阵 {
+public class JZ19_顺时针打印矩阵 {
 	
 	public static ArrayList<Integer> printMatrix(int[][] matrix) {
 		// if (matrix == null)

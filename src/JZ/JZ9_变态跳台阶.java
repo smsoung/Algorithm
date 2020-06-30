@@ -1,6 +1,6 @@
 package JZ;
 
-public class 变态跳台阶 {
+public class JZ9_变态跳台阶 {
 	
 	public int JumpFloorII(int target) {
 		if (target <= 1)

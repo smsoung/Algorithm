@@ -1,6 +1,6 @@
 package JZ;
 
-public class 复杂链表的复制 {
+public class JZ25_复杂链表的复制 {
 	
 	public RandomListNode Clone(RandomListNode pHead) {
 

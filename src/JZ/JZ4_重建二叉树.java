@@ -1,6 +1,6 @@
 package JZ;
 
-public class 重建二叉树 {
+public class JZ4_重建二叉树 {
 	
 	public TreeNode reConstructBinaryTree(int[] pre, int[] in) {
 		TreeNode root = reConstructBinaryTree(pre, 0, pre.length - 1, in, 0, in.length - 1);

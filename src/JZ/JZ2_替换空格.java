@@ -1,6 +1,6 @@
 package JZ;
 
-public class 替换空格 {
+public class JZ2_替换空格 {
 	
 	public static String replaceSpace(StringBuffer sb) {
 		int spacenum = 0;// 空格数
